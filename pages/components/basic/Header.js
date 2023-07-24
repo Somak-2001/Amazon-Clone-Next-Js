@@ -44,7 +44,7 @@ const Header = () => {
           {/* <Link href='/login'> */}
             <div className="flex flex-col cursor-pointer xl:mx-3 md:m-1 sm:m-1" onClick={()=>{
               if(!user){
-                router.push('/Login');
+                router.push('/login');
               }
             }}>
               <b className="relative bottom-3">Hello, {user?user.email:'Guest'}</b>
