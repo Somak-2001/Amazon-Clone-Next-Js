@@ -5,7 +5,9 @@ import Header from "./components/basic/Header";
 const Homepage = () => {
   return (
     <>
+    {/* Header Section */}
       <Header/>
+      {/* Background Image */}
       <Image src='https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3000_.jpg'
         width="0"
         height="0"
@@ -13,6 +15,7 @@ const Homepage = () => {
         alt='homepage'
         className={`w-full h-auto relative bottom-32 ${styles.img} md:h-[25%] sm:h-[15%]`}
       />
+      {/* Products */}
       <div className="flex lg:m:0 md:mt-12 sm:mt-16 xl:flex-row lg:flex-row md:flex-row md:relative lg:mr-0 xl:mr-0 md:mr-[30%] sm:flex-col relative left-24 bottom-96">
         <Product id={1} title="The Lean Startup: How Constant innovation Creates Radically Successful Businesses Paperback"
         price={11.96}

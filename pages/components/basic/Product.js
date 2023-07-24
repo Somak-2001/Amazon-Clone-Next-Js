@@ -2,8 +2,10 @@ import { StateContext } from "../../StateProvider";
 import { useContext } from "react";
 import Image from "next/image";
 
+//Prototype of product of homepage
 const Product = ({id, title, price, image, rating }) => {
   const [{ basket }, dispatch] = useContext(StateContext);
+  //ADD to Basket Action dispatch is defined
   const  Add_To_Basket = () => {
     dispatch({
         type: 'ADD_TO_BASKET',
@@ -24,15 +26,18 @@ const Product = ({id, title, price, image, rating }) => {
         <span>$</span>
         <strong>{price}</strong>
       </div>
+      {/* Rating stars are displayed */}
       <div className="flex">
         {Array(rating).fill().map((_, i) =>
-          <p>🌟</p>
+          <p key={i}>🌟</p>
         )
         }
       </div>
+      {/* Image Section */}
       <div className="flex justify-center m-4">
-        <Image src={image} width={200} height={100} className="h-auto" />
+        <Image src={image} width={200} height={100} alt='image' className="h-auto" />
       </div>
+      {/* Add to basket button added */}
       <div className="flex justify-center relative ">
         <button className="bg-amber-500 p-1 border-black rounded-md" onClick={Add_To_Basket}>Add to Cart</button>
       </div>

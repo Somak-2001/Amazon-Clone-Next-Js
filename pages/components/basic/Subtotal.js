@@ -2,6 +2,7 @@ import { StateContext } from "@/pages/StateProvider";
 import { useContext } from "react";
 // import CurrencyFormat from "react-currency-format";
 
+//The function to get the total amount of products in basket
 export const getBasketTotal = (basket) => {
 //accumulator === amount
     return basket?.reduce((amount, item) => {
@@ -9,6 +10,7 @@ export const getBasketTotal = (basket) => {
     }, 0);
 }
 
+//Showing the subtotal amount of products added in basket/cart, displayed in checkout page
 const Subtotal = () => {
     const [{ basket }] = useContext(StateContext);
     let value=getBasketTotal(basket);

@@ -6,6 +6,8 @@ import { StateContext } from '@/pages/StateProvider';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+
+//The Card Payment Prototype
 const Cardform = () => {
     // const stripe = useStripe();
     // const elements = useElements();
@@ -15,7 +17,7 @@ const Cardform = () => {
     const [processing, setProcessing] = useState(false);
     const [clientSecret, setClientSecret] = useState(true);
     const [{ basket }] = useContext(StateContext);
-    const [{orderBasket},dispatch] = useOrder();
+    // const [{orderBasket},dispatch] = useOrder();
     let total = getBasketTotal(basket);
     const router = useRouter();
     // useEffect(() => {

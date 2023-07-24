@@ -1,4 +1,4 @@
-
+//Reducer function to define actions
 const Cartreducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TO_BASKET':

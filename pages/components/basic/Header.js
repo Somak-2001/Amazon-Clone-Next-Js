@@ -10,6 +10,8 @@ import {auth} from '../../firebase';
 const Header = () => {
   const [{ basket,user }] = useContext(StateContext);
   // const [url,setUrl]=useState('');
+  
+  //Auth Sign Out
   const handleAuth = () =>{
     if(user){
       auth.signOut();
@@ -21,7 +23,7 @@ const Header = () => {
       <div className="h-20 p-5 bg-sky-950 sticky w-full md:pt-3 sm:pt-3"></div>
       {/* Image */}
       <Link href="/">
-        <Image src='/amazon-logo.jpg' width="100" height="100" className="relative bottom-20 m-4 cursor-pointer lg:w-[100px] md:w-[75px] sm:w-[60px]" />
+        <Image src='/amazon-logo.jpg' alt='image' width="100" height="100" className="relative bottom-20 m-4 cursor-pointer lg:w-[100px] md:w-[75px] sm:w-[60px]" />
       </Link>
       {/* Search Bar */}
       <div className="relative left-80 bottom-36">
@@ -42,14 +44,14 @@ const Header = () => {
           {/* <Link href='/login'> */}
             <div className="flex flex-col cursor-pointer xl:mx-3 md:m-1 sm:m-1" onClick={()=>{
               if(!user){
-                router.push('/login');
+                router.push('/Login');
               }
             }}>
               <b className="relative bottom-3">Hello, {user?user.email:'Guest'}</b>
               <b className="relative bottom-3" onClick={handleAuth}>{user?'sign out':'sign in'}</b>
             </div>
           {/* </Link> */}
-          <Link href='/order'>
+          <Link href='/Order'>
           <div className="flex flex-col cursor-pointer xl:mx-3 md:mx-1 sm:m-1 relative bottom-3 ">
             <b>Returns</b>
             <span><b>& Orders</b></span>

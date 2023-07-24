@@ -5,6 +5,8 @@ import { StateContext } from "./StateProvider";
 import { useRouter } from "next/router";
 import Subtotal from "./components/basic/Subtotal";
 
+
+//Add to Cart page
 const Checkout = () => {
   const [{ basket, user },] = useContext(StateContext);
   const router = useRouter();
@@ -29,7 +31,7 @@ const Checkout = () => {
           </div>
           <div className=" w-full">
               <button type='button' className="bg-yellow-400 mt-[10%] lg:w-[80%] md:w-20 sm:w-16 relative left-[5%] 
-            shadow-md" onClick={() => router.push('/payment')} >Proceed to Checkout</button>
+            shadow-md" onClick={() => router.push('/Payment')} >Proceed to Checkout</button>
           </div>
         </div>
       </div>

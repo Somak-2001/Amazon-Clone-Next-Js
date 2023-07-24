@@ -8,7 +8,7 @@ import Cardform from "./components/basic/Cardform";
 
 // const promise = loadStripe('pk_test_51NUhdMSCdySUYrmqlnh3GtmrnlKHUrboq3GTNVu0S07ocFp1yaruVA5iByDE1TFnyiuxA016niwXrtnop4kQOsuS00eWELo3IG');
 
-const payment = () => {
+const Payment = () => {
     const [{ basket, user }] = useContext(StateContext);
 
     return (
@@ -70,4 +70,4 @@ const payment = () => {
     )
 }
 
-export default payment;
+export default Payment;
