@@ -26,7 +26,7 @@ const Header = () => {
         <Image src='/amazon-logo.jpg' alt='image' width="100" height="100" className="relative bottom-20 m-4 cursor-pointer lg:w-[100px] md:w-[75px] sm:w-[60px]" />
       </Link>
       {/* Search Bar */}
-      <div className="relative left-80 bottom-36">
+      <div className="relative left-80 bottom-56">
       <div className="relative right-[8%]">
         <input type='text' placeholder="Search Amazon" className="lg:w-[50%] h-7 p-5 rounded-md bg-stone-50 md:w-2/5 sm:w-1/5 md:right-[30%] sm:right-[35%]" />
         <SearchOutlinedIcon className="bg-amber-500 rounded-md relative right-9 bottom-1" fontSize="large"
