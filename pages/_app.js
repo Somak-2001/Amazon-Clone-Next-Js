@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import { StateProvider} from './StateProvider';
+import  StateProvider from './StateProvider';
 
 
 export default function App({ Component, pageProps }) {

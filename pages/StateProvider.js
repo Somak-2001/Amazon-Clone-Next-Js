@@ -1,5 +1,5 @@
 import { useContext, useReducer, createContext } from "react";
-import reducer from './Cartreducer';
+import reducer from '../Cartreducer.js';
 
 export const StateContext = createContext();
 
@@ -10,7 +10,7 @@ export const initialState = {
 };
 
 
-export const StateProvider = ({ children }) => {    
+const StateProvider = ({ children }) => {    
 
     return (
         <StateContext.Provider value={useReducer(reducer, initialState)}>
@@ -19,4 +19,5 @@ export const StateProvider = ({ children }) => {
     )
 };
 
+export default StateProvider;
 // export const useStateValue = () => useContext(StateContext);

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Head from "next/head";
-import { auth } from "./firebase";
+import {auth} from '../firebase.js';
 // import { useNavigate } from 'react-router-dom';
 import { useRouter } from "next/router";
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword} from 'firebase/auth';

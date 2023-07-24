@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Homepage from './Homepage';
-import {auth} from './firebase';
+import {auth} from '../firebase.js';
 import { useContext, useEffect } from 'react';
 import { StateContext } from './StateProvider';
 export default function Home() {

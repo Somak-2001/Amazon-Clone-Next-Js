@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { StateContext } from "../../StateProvider";
 import { useContext } from "react";
 import { useRouter } from "next/router";
-import {auth} from '../../firebase';
+import {auth} from '../../../firebase.js';
 const Header = () => {
   const [{ basket,user }] = useContext(StateContext);
   // const [url,setUrl]=useState('');
